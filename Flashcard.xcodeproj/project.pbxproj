@@ -12,6 +12,7 @@
 		9F002253218E56BA0061B363 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F002251218E56BA0061B363 /* Main.storyboard */; };
 		9F002255218E56BC0061B363 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F002254218E56BC0061B363 /* Assets.xcassets */; };
 		9F002258218E56BC0061B363 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F002256218E56BC0061B363 /* LaunchScreen.storyboard */; };
+		9F002262218E626A0061B363 /* CreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F002261218E626A0061B363 /* CreationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		9F002254218E56BC0061B363 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F002257218E56BC0061B363 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9F002259218E56BC0061B363 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F002261218E626A0061B363 /* CreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				9F00224D218E56BA0061B363 /* AppDelegate.swift */,
 				9F00224F218E56BA0061B363 /* ViewController.swift */,
+				9F002261218E626A0061B363 /* CreationViewController.swift */,
 				9F002251218E56BA0061B363 /* Main.storyboard */,
 				9F002254218E56BC0061B363 /* Assets.xcassets */,
 				9F002256218E56BC0061B363 /* LaunchScreen.storyboard */,
@@ -137,6 +140,7 @@
 			files = (
 				9F002250218E56BA0061B363 /* ViewController.swift in Sources */,
 				9F00224E218E56BA0061B363 /* AppDelegate.swift in Sources */,
+				9F002262218E626A0061B363 /* CreationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
