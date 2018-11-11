@@ -36,8 +36,8 @@ class CreationViewController: UIViewController {
         {
             flashcardsController.updateFlashcard(question: questionText!, answer: answerText!)
             dismiss(animated: true)
+            flashcardsController.frontLabel.isHidden=false
         }
-        
     }
     
     override func viewDidLoad() {

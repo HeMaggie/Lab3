@@ -35,7 +35,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="1" green="0.90100893424840944" blue="0.9637403926644722" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <gestureRecognizers/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -45,6 +45,15 @@
                                         <state key="normal" title="✏️"/>
                                         <connections>
                                             <segue destination="FPV-Pj-tHb" kind="show" id="5Mz-HU-hWJ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zOq-kP-Jow">
+                                        <rect key="frame" x="-7" y="-8" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <gestureRecognizers/>
+                                        <state key="normal" title="❌"/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="WSV-mN-d7W" appends="YES" id="xMm-Am-AX5"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -99,6 +108,28 @@
                                     <outletCollection property="gestureRecognizers" destination="EJf-lm-qtB" appends="YES" id="kdO-lf-kOU"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SZp-YU-SXO">
+                                <rect key="frame" x="8" y="625" width="35" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Prev"/>
+                                <connections>
+                                    <action selector="didTapOnPrev:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2W9-kw-jS8"/>
+                                    <outletCollection property="gestureRecognizers" destination="SbS-UK-e4K" appends="YES" id="NFK-R6-gRW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DF9-bn-IlH">
+                                <rect key="frame" x="323" y="625" width="36" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="didTapOnNext:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YnB-dT-0MH"/>
+                                    <outletCollection property="gestureRecognizers" destination="WVb-z5-2kf" appends="YES" id="nFH-h1-1gA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
@@ -112,9 +143,11 @@
                         <outlet property="backLabel" destination="P89-PR-vKi" id="SZc-jb-mbr"/>
                         <outlet property="card" destination="F4t-sG-1pG" id="PrN-LP-4w9"/>
                         <outlet property="frontLabel" destination="dg3-eX-o0I" id="UFQ-Q2-M5k"/>
+                        <outlet property="nextButton" destination="DF9-bn-IlH" id="NTX-rb-pNK"/>
                         <outlet property="optOne" destination="LNO-8q-Y1z" id="Pba-mn-fvD"/>
                         <outlet property="optThree" destination="fQq-mG-KWC" id="InV-BR-bAW"/>
                         <outlet property="optTwo" destination="lxQ-oN-t03" id="34t-DB-m6a"/>
+                        <outlet property="prevButton" destination="SZp-YU-SXO" id="T9g-ya-rK5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -142,6 +175,26 @@
                 <tapGestureRecognizer id="gQO-sx-Nj7">
                     <connections>
                         <action selector="didTapOnView:" destination="BYZ-38-t0r" id="yCq-IU-fcT"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="SbS-UK-e4K">
+                    <connections>
+                        <action selector="didTapOnPrev:" destination="BYZ-38-t0r" id="zuR-og-dCI"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="WVb-z5-2kf">
+                    <connections>
+                        <action selector="didTapOnNext:" destination="BYZ-38-t0r" id="fEQ-Uf-cYE"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Ux7-7a-C9w">
+                    <connections>
+                        <action selector="didTapOnDelete:" destination="BYZ-38-t0r" id="fqi-7B-cNS"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="WSV-mN-d7W">
+                    <connections>
+                        <action selector="didTapOnDelete:" destination="BYZ-38-t0r" id="L3x-7B-WrP"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
